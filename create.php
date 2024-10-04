@@ -10,13 +10,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stock = $_POST['stock'];
 
     try {
-        $sql = "INSERT INTO jabones (nombre, descripcion, precio, stock) VALUES (:nombre, :descripcion, :precio, :stock)";
+        $sql = "INSERT INTO libros (nombre, descripcion, precio, stock) VALUES (:nombre, :descripcion, :precio, :stock)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute(['nombre' => $nombre, 'descripcion' => $descripcion, 'precio' => $precio, 'stock' => $stock]);
 
-        $message = 'Jabón añadido con éxito!';
+        $message = 'Libro añadido con éxito!';
     } catch (PDOException $e) {
-        $message = 'Error al añadir el jabón: ' . $e->getMessage();
+        $message = 'Error al añadir el libro: ' . $e->getMessage();
     }
 }
 ?>
@@ -26,10 +26,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Añadir Jabón</title>
+    <title>Añadir Libro</title>
 </head>
 <body>
-<h2>Añadir nuevo Jabón</h2>
+<h2>Añadir nuevo libro</h2>
 
 <?php if (!empty($message)): ?>
     <p><?= $message ?></p>
