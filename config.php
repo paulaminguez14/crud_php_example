@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$db   = 'libros';
+$db   = 'libreria';
 $user = 'root';
 $pass = '';
 $charset = 'utf8mb4';
