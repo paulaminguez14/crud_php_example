@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <label for="stock">Stock:</label>
     <input type="number" name="stock" id="stock" required>
     <br>
-    <input type="submit" value="Añadir Jabón">
+    <input type="submit" value="Añadir Libro">
 </form>
 
 </body>
